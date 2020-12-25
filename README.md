@@ -14,20 +14,20 @@ Request URL     : "http://localhost/57ff43800f34b5cf0fa2c632566e933b/authenticat
 Request Method  : "POST"
 Request Header  : "Content-Type: application/json; charset=UTF-8"
 Request Body    :
-    ```
+    ```yaml
     {
         "username": "test@mail.com",
         "password": "SuperSecretPassword"
     }
     ```
 Response Success:
-    ```
+    ```yaml
     {
         "message": "User has been created! You need to validate your email on mailjet to start send email."
     }
     ```
 Response Failed :
-    ```
+    ```yaml
     {
         "message": "{$FAILED_MESSAGE}"
     }
@@ -39,21 +39,21 @@ Request URL     : "http://localhost/57ff43800f34b5cf0fa2c632566e933b/authenticat
 Request Method  : "POST"
 Request Header  : "Content-Type: application/json; charset=UTF-8"
 Request Body    :
-    ```
+    ```yaml
     {
         "username": "test@mail.com",
         "password": "SuperSecretPassword"
     }
     ```
 Response Success:
-    ```
+    ```yaml
     {
         "message": "Login Success!",
         "token": "{$USER_TOKEN}"
     }
     ```
 Response Failed :
-    ```
+    ```yaml
     {
         "message": "{$FAILED_MESSAGE}"
     }
@@ -64,13 +64,13 @@ Request URL     : "http://localhost/57ff43800f34b5cf0fa2c632566e933b/mail/list.p
 Request Method  : "POST"
 Request Header  : "Content-Type: application/json; charset=UTF-8"
 Request Body    :
-    ```
+    ```yaml
     {
         "token": "{$USER_TOKEN}"
     }
     ```
 Response Failed :
-    ```
+    ```yaml
     {
         "message": "{$FAILED_MESSAGE}"
     }
@@ -81,7 +81,7 @@ Request URL     : "http://localhost/57ff43800f34b5cf0fa2c632566e933b/mail/send_m
 Request Method  : "POST"
 Request Header  : "Content-Type: application/json; charset=UTF-8"
 Request Body    :
-    ```
+    ```yaml
     {
         "token": "{$USER_TOKEN}",
         "mail_to": "target@mail.com",
@@ -92,7 +92,7 @@ Request Body    :
     }
     ```
 Response Failed :
-    ```
+    ```yaml
     {
         "message": "{$FAILED_MESSAGE}"
     }

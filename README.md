@@ -10,23 +10,23 @@
 Before you can send an email, you need to signup/register your email. Make sure you used an active email address. It will used to validate your email before you can sending an email. After you finish with signup and validate the email, you need to login to get token for your account. This token will used for every request such as get list of mails and send an email.
 
 ## SignUp to system
-Request URL     : "http://localhost/57ff43800f34b5cf0fa2c632566e933b/authenticate/signup.php"
-Request Method  : "POST"
-Request Header  : "Content-Type: application/json; charset=UTF-8"
-Request Body    :
+* Request URL     : "http://localhost/57ff43800f34b5cf0fa2c632566e933b/authenticate/signup.php"
+* Request Method  : "POST"
+* Request Header  : "Content-Type: application/json; charset=UTF-8"
+* Request Body    :
     ```yaml
     {
         "username": "test@mail.com",
         "password": "SuperSecretPassword"
     }
     ```
-Response Success:
+* Response Success:
     ```yaml
     {
         "message": "User has been created! You need to validate your email on mailjet to start send email."
     }
     ```
-Response Failed :
+* Response Failed :
     ```yaml
     {
         "message": "{$FAILED_MESSAGE}"
@@ -35,24 +35,24 @@ Response Failed :
 
 
 ## Login
-Request URL     : "http://localhost/57ff43800f34b5cf0fa2c632566e933b/authenticate/login.php"
-Request Method  : "POST"
-Request Header  : "Content-Type: application/json; charset=UTF-8"
-Request Body    :
+* Request URL     : "http://localhost/57ff43800f34b5cf0fa2c632566e933b/authenticate/login.php"
+* Request Method  : "POST"
+* Request Header  : "Content-Type: application/json; charset=UTF-8"
+* Request Body    :
     ```yaml
     {
         "username": "test@mail.com",
         "password": "SuperSecretPassword"
     }
     ```
-Response Success:
+* Response Success:
     ```yaml
     {
         "message": "Login Success!",
         "token": "{$USER_TOKEN}"
     }
     ```
-Response Failed :
+* Response Failed :
     ```yaml
     {
         "message": "{$FAILED_MESSAGE}"
@@ -60,16 +60,16 @@ Response Failed :
     ```
 
 ## Get Email List
-Request URL     : "http://localhost/57ff43800f34b5cf0fa2c632566e933b/mail/list.php"
-Request Method  : "POST"
-Request Header  : "Content-Type: application/json; charset=UTF-8"
-Request Body    :
+* Request URL     : "http://localhost/57ff43800f34b5cf0fa2c632566e933b/mail/list.php"
+* Request Method  : "POST"
+* Request Header  : "Content-Type: application/json; charset=UTF-8"
+* Request Body    :
     ```yaml
     {
         "token": "{$USER_TOKEN}"
     }
     ```
-Response Failed :
+* Response Failed :
     ```yaml
     {
         "message": "{$FAILED_MESSAGE}"
@@ -77,10 +77,10 @@ Response Failed :
     ```
 
 ## Send an Email
-Request URL     : "http://localhost/57ff43800f34b5cf0fa2c632566e933b/mail/send_mail.php"
-Request Method  : "POST"
-Request Header  : "Content-Type: application/json; charset=UTF-8"
-Request Body    :
+* Request URL     : "http://localhost/57ff43800f34b5cf0fa2c632566e933b/mail/send_mail.php"
+* Request Method  : "POST"
+* Request Header  : "Content-Type: application/json; charset=UTF-8"
+* Request Body    :
     ```yaml
     {
         "token": "{$USER_TOKEN}",
@@ -91,7 +91,7 @@ Request Body    :
         "mail_attachment": "{$BASE64_STRING}"
     }
     ```
-Response Failed :
+* Response Failed :
     ```yaml
     {
         "message": "{$FAILED_MESSAGE}"
